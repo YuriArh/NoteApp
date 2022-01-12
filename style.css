@@ -228,11 +228,13 @@ body {
 }
 
 .content-card__header-title {
-
+  height: 4vh;
+  border: none;
   font-family: 'Ubuntu', sans-serif;
   font-size: 130%;
   font-weight: 500; 
   color: #393a3f;
+  resize: none;
 }
 
 
@@ -241,4 +243,19 @@ body {
   padding: 3vh 3vw;
   font-weight: 500;
   color: #a4a6ac;
+}
+
+.content-card__form {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  color: #a4a6ac;
+  border: none;
+  height: 70vh !important;
+  width: 100% !important;
+  overflow-y: scroll;
+  resize: none;
+}
+
+textarea:focus, input:focus{
+  outline: none;
 }
