@@ -1,0 +1,244 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Стилизуем header */
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 25px;
+  height: 90vh;
+  margin: 5vh 10vw;
+  overflow: hidden;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+}
+#search {
+
+}
+#logo {
+
+}
+
+
+.left-menu {
+  display: flex;
+  flex-basis: 17%;
+  background-color: #3e77f8;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  flex-basis: 23%;
+}
+
+.content-card {
+
+  flex-basis: 60%;
+}
+
+.leftbutton {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 130%;
+  display: flex;
+  justify-content: start;
+  color: white;
+  width: 100%;
+  padding: 1vh 2vw 1vh 2vw;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* отображаем курсор в виде руки при наведении; некоторые
+    считают, что необходимо оставлять стрелочный вид для кнопок */
+    cursor: pointer;
+}
+
+.list-content {
+  background-color: #f6f7fb;
+  height: 100%;
+}
+
+.list__header {
+  padding: 2vh 2vw;
+}
+.list__title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 140%;
+  font-weight: 500;
+  padding-bottom: 1vh;
+  color: #393a3f;
+}
+
+#search {
+  border: none;
+  border-radius: 5px;
+  background-color: #ececf1;
+  padding: 1vw;
+  height: 4vh;
+  width: 100%;
+  margin-bottom: 1vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 90%;
+  font-weight: 400;
+  color: rgb(124,131,141);
+}
+
+.addbutton {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 100%;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #3e77f8;
+  height: 4vh;
+  width: 100%;
+  margin-bottom: 2vh;
+}
+
+.card {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 1vh 2vw;
+  border-color: #ecedf0;
+}
+.card__header {
+  font-family: 'Roboto', sans-serif;
+  font-size: 90%;
+  color: #c5c9d4;
+  padding-top: 1vh;
+  padding-bottom: 0.7vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  height: 100%;
+  background-color: #A1B2C3;
+}
+
+.card__title {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  padding-bottom: 0.5vh;
+  color: #393a3f;
+}
+
+.card__text {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 90%;
+  font-weight: 400;
+  color: #afb3bd;
+}
+
+.content-card__header {
+  padding: 2vh 2vw;
+  border-bottom: 1px solid;
+  border-color: #ecedf0;
+}
+.content-card__header-date {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-size: 90%;
+  color: #c2c5d0;
+}
+
+.content-card__header-title {
+
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 130%;
+  font-weight: 500; 
+  color: #393a3f;
+}
+
+
+.content-card__text {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 3vh 3vw;
+  font-weight: 500;
+  color: #a4a6ac;
+}
